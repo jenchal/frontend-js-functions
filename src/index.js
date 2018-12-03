@@ -1,60 +1,33 @@
-// -----------------First task---------------//
-let x = 6;
-let y = 15;
-let z = 4;
-let res;
-
-res = x+= y - x++ *2;
-console.log('res = x =', res);
-
-res = z = --x - y * 5;
-console.log('res = z =',res);
-
-res = y/= x + 5 % z;
-console.log('res = y =',res);
-
-res = z = x++ + y * 5;
-console.log('res = z =',res);
-
-res = x = y - x++ * z;
-console.log('res = x =',res);
-
-// -----------------First task---------------//
-
-// -----------------Second task---------------//
-
-let arrNumbers = [7, 8, 9, 5, 1];
-
-function min() {
-	if (isNaN(arrNumbers)) {
-		return Math.min(... arrNumbers);
-	} else {
-	}
+function  isNumber(value) {
+	return typeof value === 'number';
 }
 
-console.log(min());
-
-// -----------------Second task---------------//
-
-// -----------------Third task---------------//
-
-function max() {
-	if (isNaN(arrNumbers)) {
-		return Math.max(... arrNumbers);
-	} else {
-	}
+function getMaxValue(maxValue,currentValue) {
+	return maxValue > currentValue ? maxValue : currentValue;
 }
 
-console.log(max());
+function getMinValue(minValue,currentValue) {
+	return minValue < currentValue ? minValue : currentValue;
+}
 
-// -----------------Third task---------------//
+function getSum(sumValue, currentValue) {
+	return sumValue + currentValue;
+}
 
-// -----------------Fourth task---------------//
+export function min(arrNumbers[]) {
+	return arrNumbers;
+	.filter(isNumber);
+	.reduce(getMinValue,undefined);
+}
 
- let result = arrNumbers.reduce(function(sum, current) {
-	return sum + current;
-}, 0);
+export function max(arrNumbers[]) {
+	return arrNumbers;
+	.filter(isNumber);
+	.reduce(getMaxValue,undefined);
+}
 
-console.log(result);
-
-// -----------------Fourth task---------------//
+export function sum(...arrNumbers) {
+	return arrNumbers;
+	.filter(isNumber);
+	.reduce(getSum,0);
+}
